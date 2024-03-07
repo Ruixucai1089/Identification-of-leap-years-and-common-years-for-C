@@ -1,29 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-	printf("請輸入李曉琪8月份的工讀時數:");
-	int time, money=0;
-	scanf("%d",&time);
-	
-	if(time<=60)
+	int a;
+	printf("輸入年分:");
+	scanf("%d",&a);
+	if(a%4==0 && a%100 || a%400==0)
 	{
-		money = time*75;
-		printf("該薪資為%d",money);
-	}
-	else if(time>=61 && time<=75)
-	{
-		money = (60*75)+((time-60)*1.25*75);
-		printf("該薪資為:%d",money);
-	}
+		printf("閏年\n");
+	} 
 	else
 	{
-		money = (60*75)+(15*1.25*75)+((time-75)*1.75*75);
-		printf("該薪資為:%d\n",money);
+		printf("平年\n");
 	}
 	
+	
 
-    system("pause");
-    return 0;
+	system("pause");
+	return 0;
 }
