@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	printf("請輸入李曉琪8月份的工讀時數:");
+	int time, money=0;
+	scanf("%d",&time);
+	
+	if(time<=60)
+	{
+		money = time*75;
+		printf("該薪資為%d",money);
+	}
+	else if(time>=61 && time<=75)
+	{
+		money = (60*75)+((time-60)*1.25*75);
+		printf("該薪資為:%d",money);
+	}
+	else
+	{
+		money = (60*75)+(15*1.25*75)+((time-75)*1.75*75);
+		printf("該薪資為:%d\n",money);
+	}
+	
+
+    system("pause");
+    return 0;
+}
